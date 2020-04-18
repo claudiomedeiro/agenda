@@ -21,6 +21,8 @@ from django.views.generic import RedirectView   # para fazer o redirect da raiz 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/', views.lista_eventos),
+    path('agenda/evento/', views.evento),
+    path('agenda/evento/submit', views.submit_evento),
     path('', RedirectView.as_view(url='/agenda/')), # fazendo o redirect de raiz para /agenda
     path('login/', views.login_user),
     path('login/submit', views.submit_login),       # este é sem so / final mesmo porque não é exatamente uma URL mas um get
