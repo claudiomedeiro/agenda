@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/', views.lista_eventos),
     path('', RedirectView.as_view(url='/agenda/')), # fazendo o redirect de raiz para /agenda
+    path('login/', views.login_user),
+    path('login/submit', views.submit_login),       # este é sem so / final mesmo porque não é exatamente uma URL mas um get
+    path('logout/', views.logout_user),
 ]
